@@ -2,17 +2,60 @@
 #home {
   background-color: #1a202c; /* Dark background for high contrast */
   color: #fff; /* White text color */
+  padding: 50px 20px; /* Adjust padding for better spacing */
+  text-align: center; /* Center content by default */
 }
 
+/* Primary text color */
 #home .text-primary {
   color: #fbbf24; /* A bright yellow/orange to ensure readability */
 }
 
+/* Button styling */
 #home .btn {
   background-color: #fbbf24; /* Button color for contrast */
   color: #1a202c; /* Dark text for button */
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
 }
 
 #home .btn:hover {
   background-color: #eab308; /* Lighter shade on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  #home {
+    padding: 30px 10px;
+    text-align: center; /* Ensure content stays centered */
+  }
+
+  #home .btn {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  #home {
+    padding: 20px 5px;
+  }
+
+  #home .text-primary {
+    font-size: 1.2rem; /* Slightly reduce text size for better fit */
+  }
+
+  #home .btn {
+    font-size: 0.8rem;
+    padding: 6px 12px;
+  }
+
+  button {
+    font-size: 24px; /* Increase icon size */
+    cursor: pointer; /* Make it clickable */
+    padding: 10px;
+  }
+  
 }

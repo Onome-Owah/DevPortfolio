@@ -85,37 +85,34 @@ const projects = [
     link: 'https://techconsultsite.netlify.app/', 
     description: 'Built a professional tech consulting website showcasing services, portfolio, and client testimonials.' 
   },
-
 ];
 
 const Projects = () => {
-    const [filter, setFilter] = useState('All');
-    const [search, setSearch] = useState('');
-  
-    const filteredProjects = projects.filter(project => 
-      (filter === 'All' || project.tech.includes(filter)) && 
-      project.title.toLowerCase().includes(search.toLowerCase())
-    );
-  
-    return (
-      <section className="my-8">
-        <h2 className="text-4xl font-bold text-white mb-4">Projects </h2>
-        
-        {/* Search bar */}
-        <input 
-          type="text" 
-          placeholder="Search projects..." 
-          value={search}
-          onChange={(e) => setSearch(e.target.value)}
-          className="p-2 border rounded mb-4 w-full lg:w-1/4"
-        />
-        
-        {/* Filter dropdown */}
-        <div className="flex space-x-4 mb-4">
+  const [filter, setFilter] = useState('All');
+  const [search, setSearch] = useState('');
+
+  const filteredProjects = projects.filter(project => 
+    (filter === 'All' || project.tech.includes(filter)) && 
+    project.title.toLowerCase().includes(search.toLowerCase())
+  );
+
+  return (
+    <section id="projects" className="py-16 px-4 sm:px-8">
+      <div className="container mx-auto">
+        <h2 className="text-4xl font-bold text-white mb-8 text-center">Projects</h2>
+
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
+          <input 
+            type="text" 
+            placeholder="Search projects..." 
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+            className="p-3 border rounded w-full sm:w-72 text-black"
+          />
           <select 
             value={filter} 
             onChange={(e) => setFilter(e.target.value)} 
-            className="p-2 border rounded bg-nerdy-blue text-black font-pixel"
+            className="p-3 border rounded bg-white text-black"
             aria-label="Filter projects by technology"
           >
             <option value="All">All</option>
@@ -126,32 +123,25 @@ const Projects = () => {
           </select>
         </div>
 
-        {/* Project list */}
-        <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+        <div className="grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
           {filteredProjects.length > 0 ? (
             filteredProjects.map((project, index) => (
-              <div key={index} className="p-4 bg-white shadow rounded hover:shadow-lg transition">
-                <h3 className="text-xl font-semibold flex items-center">
-                  {project.title} <span className="ml-2 text-nerdy-green">👾</span>
-                </h3>
-                <p className="text-gray-600">{project.period} | {project.tech}</p>
-                <p className="mt-2">{project.description}</p>
-                <a 
-                  href={project.link} 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  className="text-blue-500 hover:underline"
-                >
-                  Click to view
+              <div key={index} className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-all flex flex-col">
+                <h3 className="text-xl font-semibold text-primary mb-2">{project.title}</h3>
+                <p className="text-gray-600 text-sm">{project.period} | {project.tech}</p>
+                <p className="text-gray-700 mt-2">{project.description}</p>
+                <a href={project.link} target="_blank" rel="noopener noreferrer" className="mt-auto text-blue-500 hover:underline">
+                  View Project
                 </a>
               </div>
             ))
           ) : (
-            <p className="text-gray-500">No projects available for this filter.</p>
+            <p className="text-gray-500 text-center">No projects available for this filter.</p>
           )}
         </div>
-      </section>
-    );
-  };
-  
-  export default Projects;
+      </div>
+    </section>
+  );
+};
+
+export default Projects;
