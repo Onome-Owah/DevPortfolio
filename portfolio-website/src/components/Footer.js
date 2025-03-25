@@ -18,7 +18,7 @@ const Footer = () => {
           <a href="https://github.com/Onome-Owah" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
             GitHub
           </a>
-          <a href="https://your-portfolio-link.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+          <a href="https://onomedevportfolio.netlify.app/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
             Portfolio
           </a>
         </div>

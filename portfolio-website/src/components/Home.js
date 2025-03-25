@@ -22,7 +22,7 @@ const Home = () => {
             Check My Work
           </a>
 
-          <a href="images/ONOME_LAURA_OWAH_Software_Development.pdf" download>
+          <a href="/images/ONOME_LAURA_OWAH_Software_Development .pdf" download>
             <button className="bg-green-500 text-white py-2 px-6 rounded-lg text-lg font-semibold hover:bg-green-400 transition duration-200 border border-green-500 inline-block text-center">
               Download Resume
             </button>
