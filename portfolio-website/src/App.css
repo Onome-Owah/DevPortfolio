@@ -1,0 +1,18 @@
+/* In your Home component */
+#home {
+  background-color: #1a202c; /* Dark background for high contrast */
+  color: #fff; /* White text color */
+}
+
+#home .text-primary {
+  color: #fbbf24; /* A bright yellow/orange to ensure readability */
+}
+
+#home .btn {
+  background-color: #fbbf24; /* Button color for contrast */
+  color: #1a202c; /* Dark text for button */
+}
+
+#home .btn:hover {
+  background-color: #eab308; /* Lighter shade on hover */
+}
