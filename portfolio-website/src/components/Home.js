@@ -18,8 +18,8 @@ const Home = () => {
 
         {/* Buttons Section */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <a href="projects" className="bg-black text-primary py-2 px-6 rounded-lg text-lg font-semibold hover:bg-gray-900 border border-primary inline-block text-center">
-            Check My Work
+          <a href="/projects" className="bg-black text-primary py-2 px-6 rounded-lg text-lg font-semibold hover:bg-gray-900 border border-primary inline-block text-center">
+            Explore My Projects
           </a>
 
           <a href="/images/ONOME_LAURA_OWAH_Software_Development .pdf" download>
